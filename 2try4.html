@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Play Grow Your Buck!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRNJ8TR7C1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRNJ8TR7C1');
+</script> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<style>
+.rainbowText {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+    .rainbowText[highlight="yes"] {
+        border: 5px solid #ffff99;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%  !important;   
+    overflow: auto;    
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;        
+      padding: 10px;
+      border: 1px solid #888;
+      width: 75%;
+      font-family: "Candara";
+      font-size: 20px;
+      position: relative;
+    }
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    
+
+h1 {
+  text-align: center;
+}
+
+#year::after {
+    content: "→";
+}
+#choose-Year5-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "choose-Year5-header choose-Year5-header"
+                         "closeQ cozyQ"
+                         "upscaleHL suburbanO"
+                         "choose-Year5-footer choose-Year5-footer";
+}
+
+    #choose-Year5-header {
+        grid-area: choose-home-header;
+    }
+    #closeQ {
+        grid-area: closeQ;
+    }
+    #closcozyQeQ {
+        grid-area: closcozyQeQ;
+    }
+    #upscaleHL {
+        grid-area: upscaleHL;
+    }
+    #suburbanO {
+        grid-area: suburbanO;
+    }
+    #choose-Year5-footer {
+        grid-area: choose-Year5-footer;
+    }
+
+#Year10-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "Year10-header Year10-header"
+                            "bus puttputt"
+                            "sedan zz"
+                            "Year10-footer Year10-footer";
+}
+
+    #Year10-header {
+        grid-area: Year10-header;
+    }
+    #bus {
+        grid-area: bus;
+    }
+    #puttputt {
+        grid-area: puttputt;
+    }
+    #sedan {
+        grid-area: sedan;
+    }
+    #zz {
+        grid-area: zz;
+    }
+    #Year10-footer {
+        grid-area: Year10-footer;
+    }
+
+
+#Year30-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "Year30-header Year30-header"
+                            "basic common"
+                            "royal none"
+                            "Year30-footer Year30-footer";
+}
+
+    #Year30-header {
+        grid-area: Year30-header;
+    }
+    #basic {
+        grid-area: basic;
+    }
+    #common {
+        grid-area: common;
+    }
+    #royal {
+        grid-area: royal;
+    }
+    #Year30-footer {
+        grid-area: Year30-footer;
+    }
+
+    
+#clothes-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "clothes-header clothes-header"
+                            "lounger trendsetter"
+                            "sophisticate guru"
+                            "clothes-footer clothes-footer";
+}
+
+    #clothes-header {
+        grid-area: clothes-header;
+    }
+    #lounger {
+        grid-area: lounger;
+    }
+    #trendsetter {
+        grid-area: trendsetter;
+    }
+    #sophisticate {
+        grid-area: sophisticate;
+    }
+    #guru {
+        grid-area: guru;
+    }
+    #clothes-footer {
+        grid-area: clothes-footer;
+    }
+
+#clothes-content img {
+    width: 100%;
+}
+
+#fun-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "fun-header"
+                            "stayathome" 
+                            "weekend"
+                            "spender"
+                            "fun-footer";
+}
+
+    #fun-header {
+        grid-area: fun-header;
+    }
+    #stayathome {
+        grid-area: stayathome;
+    }
+    #weekend {
+        grid-area: weekend;
+    }
+    #spender {
+        grid-area: spender;
+    }
+    #fun-footer {
+        grid-area: fun-footer;
+    }
+
+#fun-content img {
+    width: 75%;
+    margin: 0 auto;
+}    
+
+
+#comm-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "comm-header"
+                            "comm-form"
+                            "comm-footer";
+}
+
+    #comm-header {
+        grid-area: comm-header;
+    }
+    #comm-form {
+        grid-area: comm-form;
+    }
+    #comm-footer {
+        grid-area: comm-footer;
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper"
+                             "nettv-wrapper premium-wrapper"
+                             "commsubmit commsubmit";
+    }
+        #phone-wrapper {
+            grid-area: phone-wrapper;
+        }
+        #internet-wrapper {
+            grid-area: internet-wrapper;
+        }
+        #nettv-wrapper {
+            grid-area: nettv-wrapper;
+        }
+        #premium-wrapper {
+            grid-area: premium-wrapper;
+        }
+        #commsubmit {
+            grid-area: commsubmit;
+            width: 120px;
+        }
+
+#save-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "save-header save-header"
+                            "simple savvy"
+                            "super none"
+                            "save-footer save-footer";
+}
+
+    #save-header {
+        grid-area: save-header;
+    }
+    #simple {
+        grid-area: simple;
+    }
+    #savvy {
+        grid-area: savvy;
+    }
+    #super {
+        grid-area: super;
+    }
+    #save-footer {
+        grid-area: save-footer;
+    }
+
+#wheelOfFortune {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #wheel {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #spin {
+    font: 1.5rem/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+
+#budget-wrapper {
+    font-family: "Candara";
+    font-size: 15px;
+}
+
+    .cell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .earncell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .expensecell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+.center {
+    width: 100%;
+}
+    
+.column {
+    float: left;
+    width: 48%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.commBox {
+    height: 15px;
+    width: 15px;
+}
+
+#formLink {
+    font-family: "Candara";
+    font-size: 25px;        
+}
+
+/* Added for Responsive layout */
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.expensecell * {
+    color: rgb(214, 0, 0);
+}
+
+.earncell * {
+    color: rgb(5, 110, 5);
+}
+
+#totalGame {
+    display: grid;
+    grid-template-columns: 50% auto;
+    align-items: flex-start;
+}
+
+#board {
+    /*background-color: #40783b;*/
+    display: grid;                            
+    grid-template-columns: repeat(6, auto);     
+    margin: 10px; 
+}
+
+.wide {
+    grid-row: 2 / 4;                         
+    grid-column: 2 / 6;    
+    background-color: rgb(98, 200, 127) !important;
+    font-family: "Candara";
+    font-size: 25px;
+    overflow-wrap: break-word;
+    padding: 20px;             
+}
+.wide:hover {
+    cursor: default !important;
+}
+
+.square {
+    background-color: #40783b;
+    border: 1px solid black;
+    padding: 5px;
+    word-wrap: break-word;
+    padding: 10px;
+    font-family: "Candara";
+    font-size: 20px;
+    margin-top: -1px;
+    margin-left: -1px;
+    min-height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.square[highlight="yes"] {
+    border: 5px solid #ffff99;
+}
+
+.square a {
+    display: contents;
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: #00de3b;
+}
+
+.uEvent {
+    font-size: 60px;
+    text-align: center;
+    color: goldenrod;
+}
+
+#budget-scroll {
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+#budget-sheet {
+    background-color: beige;
+}
+
+.highlightedSquare {
+    border: 5px solid #ffff99 !important;
+}
+
+.game-desc-small-outer {
+    display: none;
+}
+
+/* StackOverflow style button */
+
+.button-so {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin: 5px 5px 10px 0;
+}
+
+.button-so:hover,
+.button-so:focus {
+  background-color: #07c;
+}
+
+.button-so:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-so:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+.pauseButtonHidden {
+    display: none;
+}
+
+.audio-button {
+    font-size: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 36px !important;
+}
+
+.audio-button {
+    padding: 2px 12px !important;
+}
+
+.modal-footer-left {
+    display: inline-block;
+    width: 10%;
+    float: left;
+}
+ .modal-footer-right {
+    display: inline-block;
+    width: 90%;
+}
+
+.modal-footer-left-inner {
+    position: relative;
+top: 50%;
+transform: translateY(50%);
+}
+
+/* Mobile devices portrait */
+@media (max-width: 75em) { 
+
+    #totalGame {
+        grid-template-columns: 38% auto;
+    }
+    
+    #board {
+        grid-template-areas: "Year 1"
+                             "Year 5"
+                             "Year 10"
+                             "unexpected1"
+                             "Invest"
+                             "wheel1"
+                             "CommunicationID"
+                             "Save"
+                             "wheel2"
+                             "Clothes"
+                             "Fun"
+                             "finalInvest"
+                             "unexpected2"
+                             "wheel3"
+                             "Year 30"
+                             "unexpected3"
+        
+        ;
+        margin: 5px;
+    }
+
+    #Year1 {
+        grid-area: Year1;
+    }
+    #Year5 {
+        grid-area: Year 5;
+    }
+    #Year10 {
+        grid-area: Year10;
+    }
+    #unexpected1 {
+        grid-area: unexpected1;
+    }
+    #invest1 {
+        grid-area: invest1;
+    }
+    #wheel1 {
+        grid-area: wheel1;
+    }
+    #communicationId {
+        grid-area: communicationId;
+    }
+    #save {
+        grid-area: save;
+    }
+    #wheel2 {
+        grid-area: wheel2;
+    }
+    #clothes {
+        grid-area: clothes;
+    }
+    #fun {
+        grid-area: fun;
+    }
+    #finalInvest {
+        grid-area: finalInvest;
+    }
+    #unexpected2 {
+        grid-area: unexpected2;
+    }
+    #wheel3 {
+        grid-area: wheel3;
+    }
+    #Year30 {
+        grid-area: Year30;
+    }
+    #unexpected3 {
+        grid-area: unexpected3;
+    }
+    
+    #choose-Year5-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-Year5-header"
+                             "closeQ"
+                             "cozyQ"
+                             "upscaleHL"
+                             "suburbanO"
+                             "choose-Year5-footer";
+    }
+
+    #choose-Year5-content img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+    #Year10-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "Year10-header"
+                                "bus"
+                                "puttputt"
+                                "sedan"
+                                "zz"
+                                "Year10-footer";
+    }
+
+    #Year30-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "Year30-header"
+                                "basic"
+                                "common"
+                                "royal"
+                                "Year30-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header"
+                                "lounger"
+                                "trendsetter"
+                                "sophisticate"
+                                "guru"
+                                "clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+    }
+        #fun-content img {
+            width: 100%;
+        }    
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header"
+                                "simple"
+                                "savvy"
+                                "super"
+                                "save-footer";
+    }
+
+    #comm-content {
+        display: grid;
+        width: 94%;
+    }
+    
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper" 
+                             "internet-wrapper"
+                             "nettv-wrapper" 
+                             "premium-wrapper"
+                             "commsubmit";
+    }
+
+    /*#choose-Year1-investment-content {
+        width: 95%;
+    }*/
+
+    .square {
+        min-height: 100px;
+        max-width: 105px;
+        margin-left: 0px;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    #budget-scroll {
+        margin: 5px;
+        padding-left: 0px;
+    }
+
+    .game-desc-small {
+        display: block;
+        font-family: "Candara";
+        font-size: 20px;
+        overflow-wrap: break-word;
+        padding: 10px;
+    }
+
+    .game-desc-small-outer {
+        background-color: #ffe645 !important;
+        border: 1px solid black;
+        padding: 6px;
+        display: block;
+    }
+
+    .cell,
+    .earncell,
+    .expensecell {
+        padding: 4px;
+        font-size: 12px;
+    }
+    .modal * {
+        font-size: 15px;
+    }
+
+    .hiddenSquare {
+        display: none;
+    }
+
+    .modal-content {
+        width: 94%;
+        margin-left: 2px;
+    }
+
+    .ui-dialog {
+        width: 94% !important;
+        top: 0 !important;
+        left: 0 !important;
+        position: fixed;
+    }
+
+    #Year1::after {
+        content: "";
+    }
+
+    .modal-footer-left {
+        width: 20%;
+    }
+     .modal-footer-right {
+        width: 80%;
+    }
+}
+
+
+/* Mobile devices landscape */
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+    #choose-Year5-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-Year5-header choose-Year5-header"
+                             "closeQ cozyQ"
+                             "upscaleHL suburbanO"
+                             "choose-Year5-footer choose-Year5-footer";
+    }
+
+    #choose-Year5-content img {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    #Year10-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "Year10-header Year10-header"
+                                "bus puttputt"
+                                "sedan zz"
+                                "Year10-footer Year10-footer";
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper" 
+                             "nettv-wrapper premium-wrapper" 
+                             "commsubmit commsubmit";
+    }
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header save-header save-header"
+                                "simple savvy super"
+                                "save-footer save-footer save-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header clothes-header"
+                                "lounger trendsetter"
+                                "sophisticate guru"
+                                "clothes-footer clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "fun-header fun-header fun-header"
+                                "stayathome weekend spender"
+                                "fun-footer fun-footer fun-footer";
+    }
+
+    #Year30-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "Year30-header Year30-header Year30-header"
+                                "basic common royal"
+                                "Year30-footer Year30-footer Year30-footer";
+    }
+
+    #Year1::after {
+        content: "";
+    }
+}
+
+</style>    
+
+</head>
+<body> 
+    
+        <div class="modal-footer-right">
+            <div class="game-desc-small game-desc">
+                <span id="center-tile-small">
+                    <span id="game-desc-text" class="game-desc-text">Welcome to Grow Your Buck, a game that will teach you how to save, invest, and spend responsibly for retirement! Before playing, make sure you have a coin for the unexpected events. To begin playing, click on the highlighted square. On the page that pops up, click the option that you decide to choose. Have fun!</span>
+                </span>
+            </div>
+        </div>
+    </div>
+<div id="totalGame">
+    
+    <div id="board">     
+        <div class="square" id="Year1" onclick="popup(this, '#Year1Select');" highlight="yes" location-id="1" amount="0">Start! Make Your First Investment!</div>
+        <div class="square" id="Year5" onclick="popup(this, '#Year5Select');" highlight="no" location-id="2">What is Your Next Investment Going to Be?</div>
+        <div class="square" id="Year10" onclick="popup(this, '#Year10Select');" highlight="no" location-id="3">10 Years Already! Make Another One!</div>
+        <div class="square uEvent" id="unexpected1" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect1');" highlight="no" location-id="4">$</div>
+        <div class="square" id="invest1" onclick="popup(this, '#invest');" highlight="no" location-id="5">Invest in a Retirement Fund!</div>
+        <div class="square" id="wheel1" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no" location-id="6"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong></span></div>
+    
+        <div class="square uEvent" id="unexpected3" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect3')" location-id="16" highlight="no">$</div>
+        <div class="square wide game-desc">
+            <span id="center-tile">
+              
+                <span id="game-desc-text" class="game-desc-text">Welcome to Grow Your Buck, a game that will teach you how to save, invest, and spend responsibly to prepare for retirement! Before playing, make sure you have a coin for the unexpected events. To begin playing, click on the highlighted square. On the page that pops up, click the option that you decide to choose. Have fun!</span>
+            </span>
+        </div>
+        <div class="square" id="communicationId" onclick="popup(this, '#commSelect')" highlight="no" location-id="7">15 Years of Saving and Investing. Way to go!</div>
+    
+        <div class="square" id="Year30" onclick="popup(this, '#Year30Select')" highlight="no" location-id="15">Time Flies! You're now set up and ready to retire!</div>
+        <div class="square" id="save" onclick="popup(this, '#saveSelect')" highlight="no" location-id="8">Open a Savings Account!</div>
+    
+        <div class="square" id="wheel3" location-id="14" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong><span></div>
+        <div class="square uEvent" id="unexpected2" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect2')" location-id="13" highlight="no">$</div>
+        <div class="square" id="finalInvest" onclick="popup(this, '#invest2')" highlight="no" location-id="12">Invest in a Retirement Fund!</div>
+    <div class="square" id="fun" onclick="popup(this, '#funSelect')" highlight="no" location-id="11">Growing your money takes patience, but the end is almost there!</div>
+        <div class="square" id="clothes" onclick="popup(this, '#clothesSelect');" highlight="no" location-id="10">Buy Something Nice for Yourself!</div>
+        <div class="square" id="wheel2" location-id="9" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong><span></div>
+    </div>
+
+    <!--<div id="budget-wrapper"> -->
+        <div id="budget-scroll">
+            <table id="budget-sheet">
+                <thead>
+                    <tr>
+                        <th class="cell">Category</th>
+                        <th class="cell">Income</th>
+                        <th class="cell">Expense</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell">Year 1</td>
+                        <td class="earncell"><div id="Year1Select-cell"></div></td>
+                        <td class="expensecell"><div id="Year1Expense-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Year 5</td>
+                        <td class="earncell"><div id = "Year5Select-cell"></div></td>
+                        <td class="expensecell"><div id="Year5Expense-cell"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">Year 10</td>
+                        <td class="earncell"><div id = "Year10Select-cell"></div></td>
+                        <td class="expensecell"><div id="Year10Expense-cell"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect1Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect1-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Invest</td>
+                        <td class="earncell"><div id="invest1Cell"></div></td>
+                        <td class="expensecell" div id="invest1-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune1PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune1-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Communication</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="commSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Savings</td>
+                        <td class="earncell"><div id="saveSelectCell"></div></td>
+                        <td class="expensecell"><div id="saveSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune2PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Clothing</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="clothesSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Year 20</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="funSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Invest</td>
+                        <td class="earncell"><div id="invest2Cell"></div></td>
+                        <td class="expensecell"><div id="invest2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect2Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune3PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune3-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Year30</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="Year30Select-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect3Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect3-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <th class="cell" rowspan="2">Total</th>
+                        <td class="cell" id="incomeTotal"></td>
+                        <td class="cell" id="expenseTotal"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" colspan="2"><div id="totalCell"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+    <!--</div> -->
+</div>
+
+    <div id="modals">
+        <div class="modal" id="Year1Select">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Make Your First Investment!</h1>
+                    
+                </div>
+                <br>
+                <h2>List of Incomes!</h2>
+                <img id = "trial" class = "center" src= "https://media.istockphoto.com/id/513471220/vector/young-guy-enjoying-and-holding-huge-gift-pack-of-green.jpg?s=612x612&w=0&k=20&c=BPxAp2FzMwqiKajuIuhhgPUw31MwG2ljHn7tiA1YUAQ=" width="5" height = "100">
+                <!-- <form class = "income" onselect = "decide('Year1Select', 'income1', 40000, true, 'Year1');">
+                    <input type="radio" id="Income1" name="Year1" value="income1">
+                        <label for="Income1">Income #1: $40,000 per year</label><br>
+                    <input type="radio" id="Income2" name="Year1" value="income2">
+                        <label for="Income1">Income #1: $50,000 per year</label><br>
+                    <input type="radio" id="Income3" name="Year1" value="income3">
+                        <label for="Income1">Income #1: $60,000 per year</label><br>
+                </form> -->
+                <select name="income" id="Year1income">
+                  <option value="0">Select Income</option>
+                  <option value="40000">Income #1: $40,000 per year</option>
+                  <option value="50000">Income #2: $50,000 per year</option>
+                  <option value="60000">Income #3: $60,000 per year</option>
+                </select>
+                <h3> List of Expenses! </h3>
+                <img id = "trial" class = "center" src= "https://media.istockphoto.com/id/1083646448/vector/money-flies-into-the-wallet-held-in-the-hands-of-businessmen.jpg?s=612x612&w=0&k=20&c=YXonFHEW8-u75zpHZs4OYyfAqZtbF2xABf_GwkCsARc=" style="height:10%"/>
+                <select name="Year1expense" id="Year1expense">
+                    <option value="0">Select Expense</option>
+                    <option value="10000">Yearly Expense #1: $10,000</option>
+                    <option value="20000">Yearly Expense #2: $20,000</option>
+                    <option value="30000"> Yearly Expense #3: $30,000</option>
+                    <option value="40000"> Yearly Expense #4: $40,000</option>
+                  </select>
+                  <h3>Type of Investment!</h3>
+                  <select name="bond" id="bondYear1" onchange = "calculate('#Year1', document.getElementById('Year1income').value, document.getElementById('Year1expense').value, document.getElementById('bondYear1').value);">
+                    <option value="0"> Select Investment</option>
+                    <option value="0.0527"> Bond: 5.27% APY</option>
+                      <option value="0.0484">Treasury Bill: 4.84% APY</option>
+                      <option value="0.0530"> Certificate of Deposit: 5.30% APY</option>
+                      <option value="0.020"> Fixed Annnuity 2% Interest</option>
+                    </select>
+                    <br>
+                    <a href="https://www.cnn.com/">
+                        <img src="https://img.freepik.com/free-vector/money-lending-abstract-concept-vector-illustration-small-money-lenders-private-individuals-loans-short-term-financing-commercial-industrial-bank-credit-working-capital-abstract-metaphor_335657-2927.jpg?size=626&ext=jpg&uid=R95439164&ga=GA1.1.1170976809.1701137897&semt=ais">
+                      </a>
+                     <a href="https://www.cnn.com/">
+                        <img src="https://img.money.com/2021/07/Explainer-How-To-Buy-Stocks.jpg?quality=85">
+                      </a>
+                    <a href="https://www.cnn.com/">
+                        <img src="https://us.123rf.com/450wm/galexs/galexs2208/galexs220800013/190053091-vector-fictional-55-555-dollars-us-treasury-bond-frame-with-guilloche-grid-ribbon-with-the.jpg?ver=6">
+                    </a>
+                    <a href="https://www.cnn.com/">
+                        <img src="https://us.123rf.com/450wm/momoforsale/momoforsale2104/momoforsale210400003/167054406-government-bonds-icon-isolated-on-white-background-vector-illustration.jpg?ver=6">
+                    </a>
+                            
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="Year1-audio" src="audio/profession-audio.m4a"></audio>
+                            <button id="Year1-audio-play" class="button-so audio-button" onclick="controlAudio('Year1-audio', 'Year1-audio-play', 'Year1-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="Year1-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('Year1-audio', 'Year1-audio-pause', 'Year1-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-right">
+                        <h3>You can see here that there are lots of different investment options. However, you shouldn't choose a job only because of the salaries. These are only estimates and all of the listed jobs are really awesome! With that being said, what do you want to be?</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="Year5Select">
+            <div id="choose-Year5-content" class="modal-content">
+                <div id="choose-Year5-header" class="modal-header">
+                    <h1>It's been 5 years since your first investment. What's your next one going to be?
+                    </h1>
+                <h2>List of Incomes!</h2>
+                <select name="income" id="incomeYear5">
+                    <option value="0">Select</option>
+                    <option value="40000">Income #1: $40,000 per year</option>
+                    <option value="50000">Income #2: $50,000 per year</option>
+                    <option value="60000">Income #3: $60,000 per year</option>
+                  </select>
+                  <h3> List of Expenses! </h3>
+                  <select name="expense" id="expenseYear5">
+                    <option value="0">Select</option>
+                    <option value="10000">Yearly Expense #1: $10,000</option>
+                    <option value="20000">Yearly Expense #2: $20,000</option>
+                    <option value="30000"> Yearly Expense #3: $30,000</option>
+                    <option value="40000"> Yearly Expense #4: $40,000</option>
+                  </select>
+                <h3>Type of Investment!</h3>
+                <select name="bond" id="bondYear5" onchange = "calculate('#Year5', document.getElementById('incomeYear5').value, document.getElementById('expenseYear5').value, document.getElementById('bondYear5').value);">
+                    <option value="0">Select</option>
+                    <option value="0.0527">Bond: 5.27% APY</option>
+                    <option value="0.0484">Treasury Bill: 4.84% APY</option>
+                    <option value="0.0530"> Certificate of Deposit: 5.30% APY</option>
+                    <option value="0.020"> Fixed Annnuity 2% Interest</option>
+                  </select>
+
+                <!-- <img id="closeQ" class="center" src="https://climateismoney.files.wordpress.com/2021/07/closequarters-e1627391680721.png" alt="Close Quarters: $800/month" onclick = "decide('#Year5Select', 'Close Quarters', 800, false, '#Year5')">
+                <img id="cozyQ" class="center" src="https://climateismoney.files.wordpress.com/2021/07/cozy_quaintness.png" alt="Cozy Quaintness: $1,200/month" onclick = "decide('#Year5Select', 'Cozy Quaintness', 1200, false, '#Year5')">
+                <img id="upscaleHL" class="center" src="https://climateismoney.files.wordpress.com/2021/07/upscale_high_life.png" alt="Upscale High Life: $1,800/month" onclick = "decide('#Year5Select', 'Upscale High Life', 1800, false, '#Year5')"> 
+                <img id="suburbanO" class="center" src="https://climateismoney.files.wordpress.com/2021/07/suburban_oasis.png" alt="Suburban Oasis: $2,400/month" onclick = "decide('#Year5Select', 'Suburban Oasis', 2400, false, '#Year5')">
+                 -->
+                <div id="choose-Year5-footer" class = "modal-footer">
+                <div class = "modal footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="Year5-audio" src="audio/home-audio.m4a"></audio>
+                            <button id="Year5-audio-play" class="button-so audio-button" onclick="controlAudio('Year5-audio', 'Year5-audio-play', 'Year5-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="Year5-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('Year5-audio', 'Year5-audio-pause', 'Year5-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    <div class="modal-footer-right">
+                        <h3>You're advancing in your career, and since you're young, you aren't afraid to take risks. Although the stock market can be unpredictable, it can give you high returns. Or, you can continue to play it safe and invest in bonds, treasury bills, CDs, or fixed annuities. Whatever you choose, choose wisely because you never know what life will throw at you!
+                        </h3> 
+                    </div>
+                </div>
+                   
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="modal" id="Year10Select">
+            <div id="Year10-content" class="modal-content">
+                <div id="Year10-header" class="modal-header">
+                    <h1>What a time! 10 years of financial responsibility, and life has been pretty stable. What's your next investment looking like?</h1>
+                </div>
+                <h2>List of Incomes!</h2>
+                <select name="income" id="incomeYear10">
+                    <option value="0">Select</option>
+                    <option value="90000">Income #1: $90,000 per year</option>
+                    <option value="100000">Income #2: $100,000 per year</option>
+                    <option value="110000">Income #3: $100,000 per year</option>
+                  </select>
+                  <h3> List of Expenses! </h3>
+                  <select name="expense" id="expenseYear10">
+                    <option value="0">Select</option>
+                    <option value="30000">Yearly Expense #1: $30,000</option>
+                    <option value="40000">Yearly Expense #2: $40,000</option>
+                    <option value="50000"> Yearly Expense #3: $50,000</option>
+                    <option value="60000"> Yearly Expense #4: $60,000</option>
+                  </select>
+                  <h3>Type of Investment!</h3>
+                  <select name="bond" id="bondYear10" onchange = "calculate('#Year10', document.getElementById('incomeYear10').value, document.getElementById('expenseYear10').value, document.getElementById('bondYear10').value);">
+                      <option value="0">Select</option>
+                      <option value="0.0527">Bond: 5.27% APY</option>
+                      <option value="0.0484">Treasury Bill: 4.84% APY</option>
+                      <option value="0.0530"> Certificate of Deposit: 5.30% APY</option>
+                      <option value="0.020"> Fixed Annnuity 2% Interest</option>
+                      <option value="0.070"> Stock Option </option>
+                    </select>
+                <!-- <img id="bus" class="center" src="https://climateismoney.files.wordpress.com/2021/07/stopandgo.png" alt="Stop and Go: $200/month" onclick = "decide('#Year10Select', 'Stop and Go', 200, false, '#Year10')">
+                <img id="puttputt" class="center" src="https://climateismoney.files.wordpress.com/2021/07/puttputt.png" alt="Putt-Putt: $450/month" onclick="decide('#Year10Select', 'Putt-Putt', 450, false, '#Year10')">
+                <img id="sedan" class="center" src="https://climateismoney.files.wordpress.com/2021/07/slowandsteady.png" alt="Slow and Steady: $700/month" onclick="decide('#Year10Select', 'Slow and Steady', 700, false, '#Year10')">
+                <img id="zz" class="center" src="https://climateismoney.files.wordpress.com/2021/07/zoomzoom.png" alt="Zoom-Zoom: $1,200/month" onclick="decide('#Year10Select', 'Zoom-Zoom', 1200, false, '#Year10')">
+                 -->
+                <div id="Year10-footer" class="modal-footer">
+                    
+                    <div class="modal-footer-right">
+                        <h3>Great job on creating passive income for yourself (that means you're making money without even trying to). You're gaining income as you advance in your career, and life is good! Choose how to invest your money.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="unexpectedSelect1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Unexpected Event!</h1>
+                </div>
+                <p id="unexpectedText"></p>
+                <button type="button" class="button-so" id="heads">I got heads!</button>
+                <button type="button" class="button-so" id="tails">I got tails!</button>
+                <br />
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="unexpected-event-audio" src="audio/unexpected-event-audio.m4a"></audio>
+                            <button id="unexpected-event-audio-play" class="button-so audio-button" onclick="controlAudio('unexpected-event-audio', 'unexpected-event-audio-play', 'unexpected-event-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="unexpected-event-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('unexpected-event-audio', 'unexpected-event-audio-pause', 'unexpected-event-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>Life can be unexpected. Flip a coin and see where your luck stands!
+                        </h3>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="invest">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Invest in a Retirement Fund!</h1>
+                </div>
+                <p>Invest up to $100,000 in the entire game. At the end of the game, you receive 1.2 times the investment's value. Enter the amount you want to invest in the box below. When you are sure of the amount you want to invest, click "Submit".</p>
+                <br>
+                <label for="amount">Enter your amount here:</label>
+                <input type="number" id="investAmount" min="0" max="100000"><br>
+                <button id="submitAmount" class="button-so" type="button" onclick="invest('#invest1');">Submit</button><br>
+                
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        
+                    <div class="modal-footer-right">
+                       <h3> Think of retirement as a reward after working hard for so long! Many kids think retirement is only for when you’re super old, but anyone can retire at any time – you just have to have enough money saved up! It’s when you can stop working and have fun, but you’ll need enough money to live comfortably without a job in retirement!
+                    </h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="modal" id="invest2">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Invest in a Retirement Fund!</h1>
+                </div>
+                <p>Invest up to $100,000 in the entire game. At the end of the game, you receive 1.2 times the investment’s value. Enter the amount you want to invest in the box below. When you are sure of the amount you want to invest, click "Submit".</p>
+                <p id="previous-amount"></p>
+                <br>
+                <label for="amount">Enter your amount here:</label>
+                <input type="number" id="investAmount2" min="0" max="100000"><br>
+                <button id="submitInvest" class="button-so" type="button" onclick="investTwo('#finalInvest');">Submit</button><br>
+                
+                <div class="modal-footer">
+                       
+                    <div class="modal-footer-right">
+                        <h3>In case you want to put extra money in your fund, you can invest right now! Remember, that you can only invest $100,000 in the <strong>entire</strong> game. This means that if, for example, you invested $80,000 last time, you can only invest $20,000 more.</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="modal" id="wheelOfFortune">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Wheel of Fortune!!!</h1>
+                </div>
+                <div id="wheelOfFortune">
+                    <canvas id="wheel" width="300" height="300"></canvas>
+                    <div id="spin">SPIN</div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="wheel-audio" src="audio/wheel-audio.m4a"></audio>
+                            <button id="wheel-audio-play" class="button-so audio-button" onclick="controlAudio('wheel-audio', 'wheel-audio-play', 'wheel-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="wheel-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('wheel-audio', 'wheel-audio-pause', 'wheel-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>For a little bit of added fun, we're going to do the Wheel of Fortune, which is similar to the lottery! Remember though, you should never rely on the lottery to keep you afloat. You have a very very small chance of winning and it can lead to bad financial decisions.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="Year30Select">
+            <div id="Year30-content" class="modal-content">
+                <div id="Year30-header" class="modal-header">
+                    <h1>What Will You Eat?</h1>
+                </div>
+                    
+                <img id="basic" src="https://climateismoney.files.wordpress.com/2021/07/basicbasket.png" class="center" alt="Basic Basket: $400/month" onclick="decide('#Year30Select', 'Basic Basket', 400, false, '#Year30');">
+                <img id="common" src="https://climateismoney.files.wordpress.com/2021/07/common_cuisine.png" class="center" alt="Common Cuisine: $600/month" onclick="decide('#Year30Select', 'Common Cuisine', 600, false, '#Year30');">
+                <img id="royal" src="https://climateismoney.files.wordpress.com/2021/07/royal_feast.png" class="center" alt="Royal Feast: $1,000/month"  onclick="decide('#Year30Select', 'Royal Feast', 1000, false, '#Year30');">
+                    
+                <div id="Year30-footer" class="modal-footer">
+                    <div class="modal-footer-right">
+                        <h3>Time Flies! You're 50 and are now ready for your retirement. Time to eat! Food is definitely an important thing to add to your budget. We will now decide what you will eat. The Basic Basket just includes the necessary parts of your diet. This is cheaper than the other choices but doesn't include things like ice cream and soda. The Common Cuisine gives you slightly more than this. Occasionally, you can splurge on meals from your favorite restaurant as well as more luxurious deserts! Finally, the Royal Feast is the most expensive of them all. From things like chocolate sundaes and gourmet icecream, to daily restuarant meals, you can pretty much have everything! Once you have made a decision, click on the option that you want.</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="modal" id="clothesSelect">
+            <div id="clothes-content" class="modal-content">
+                <div id="clothes-header" class="modal-header">
+                    <h1>What to Wear?</h1>
+                </div>
+                
+                <img id="lounger" src="https://climateismoney.files.wordpress.com/2021/07/lounger.png" alt="The Lounger: $60/month" onclick="decide('#clothesSelect', 'The Lounger', 60, false, '#clothes')">
+                <img id="trendsetter" src="https://climateismoney.files.wordpress.com/2021/07/trendsetter.png" alt="The Trendsetter: $120/month" onclick="decide('#clothesSelect', 'The Trendsetter', 120, false, '#clothes')">
+                <img id="sophisticate" src="https://climateismoney.files.wordpress.com/2021/07/sophisticate.png" alt="The Sophisticate: $250/month" onclick="decide('#clothesSelect', 'The Sophisticate', 250, false, '#clothes')">
+                <img id="guru" src="https://climateismoney.files.wordpress.com/2021/07/glamour.png" alt="The Glamour Guru: $500/month" onclick="decide('#clothesSelect', 'The Glamour Guru', 500, false, '#clothes')">
+                
+                <div id="clothes-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="clothing-audio" src="audio/clothing-audio.m4a"></audio>
+                            <button id="clothing-audio-play" class="button-so audio-button" onclick="controlAudio('clothing-audio', 'clothing-audio-play', 'clothing-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="clothing-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('clothing-audio', 'clothing-audio-pause', 'clothing-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>We often don’t think of small expenses like clothing when we budget. While clothing can be fun, make sure you don’t get carried away with the expenses! If you are in a job that requires working in the office, you will probably want to invest in nicer clothing. However, if you have a job that requires working with your hands and potentially getting dirty, you might not want to spend a lot for clothing! What will you wear? Click the option which you want to choose.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="funSelect">
+            <div id="fun-content" class="modal-content">
+                <div id="fun-header" class="modal-header">
+                    <h1>What Will You Do For Fun?</h1>
+                </div>
+                    
+                <img id="stayathome" src="https://climateismoney.files.wordpress.com/2021/07/stayathome.png" alt="The Stay at Home: $100/month" onclick="decide('#funSelect', 'The Stay at Home', 100, false, '#fun');">
+                <img id="weekend" class="center" src="https://climateismoney.files.wordpress.com/2021/07/weekender.png" alt="The Weekender: $250/month" onclick="decide('#funSelect', 'The Weekender', 250, false, '#fun');">
+                <img id="spender" class="center" src="https://climateismoney.files.wordpress.com/2021/07/bigspender.png" alt="The Big Spender: $400/month" onclick="decide('#funSelect', 'The Big Spender', 400, false, '#fun');">
+                
+                <div id="fun-footer" class="modal-footer">
+                    <div class="modal-footer-right">    
+                        <h3>Believe it or not, having fun can cost money! With the Stay at Home option, you will be doing things such as gaming, or arts and crafts at home. In The Weekender, you would go to movies or see a cool show! As the Big Spender, you would go to big concerts, parties, and events. Which will you be? Click on the option that seems best to you!</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        
+        <div id="modals">
+            <div class="modal" id="commSelect">
+                <div class="comm-content">
+                    <div class="modal-header">
+                        <h1>Make Your First Investment!</h1>
+                    </div>
+                    <h3>List of Incomes!</h3>
+                    <img id = "trial" class = "center" src= "https://media.istockphoto.com/id/513471220/vector/young-guy-enjoying-and-holding-huge-gift-pack-of-green.jpg?s=612x612&w=0&k=20&c=BPxAp2FzMwqiKajuIuhhgPUw31MwG2ljHn7tiA1YUAQ=" width="10" length="10">
+                    <select name="income" id="income">
+                      <option value="0">Select</option>
+                      <option value="80000">Income #1: $80,000 per year</option>
+                      <option value="90000">Income #2: $90,000 per year</option>
+                      <option value="100000">Income #3: $100,000 per year</option>
+                    </select>
+                    <h3> List of Expenses! </h3>
+                    <img id = "trial" class = "center" src= "https://media.istockphoto.com/id/1083646448/vector/money-flies-into-the-wallet-held-in-the-hands-of-businessmen.jpg?s=612x612&w=0&k=20&c=YXonFHEW8-u75zpHZs4OYyfAqZtbF2xABf_GwkCsARc=" style="height:10%"/>
+                    <select name="commSelect" id="commSelect">
+                        <option value="0">Select</option>
+                        <option value="10000">Yearly Expense #1: $10,000</option>
+                        <option value="20000">Yearly Expense #2: $20,000</option>
+                        <option value="30000"> Yearly Expense #3: $30,000</option>
+                        <option value="40000"> Yearly Expense #4: $40,000</option>
+                      </select>
+                      <h3>Type of Investment!</h3>
+                      <select name="bond" id="bond" onchange = "calculate('#CommunicationID', document.getElementById('income').value, document.getElementById('expense').value, document.getElementById('bond').value);">
+                          <option value="0">Select</option>
+                          <option value="0.0527"> Bond: 5.27% APY</option>
+                          <option value="0.0484">Treasury Bill: 4.84% APY</option>
+                          <option value="0.0530"> Certificate of Deposit: 5.30% APY</option>
+                          <option value="0.020"> Fixed Annnuity 2% Interest</option>
+                        </select>
+                
+                <div id="comm-footer" class="modal-footer">
+                    <div class="modal-footer-right">
+                        <h3>You're now making a lot more money than you did when you first started investing 15 years ago, and you have access to more types of investments as an experienced investor.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="saveSelect">
+            <div id="save-content" class="modal-content">
+                <div id="save-header" class="modal-header">
+                    <h1>Don't Forget to Pay Yourself!</h1>
+                </div>
+                
+                <img id="simple" class="center" src="https://climateismoney.files.wordpress.com/2021/07/simplesaver.png" alt="Simple Saver: 5%/month" aria-activedescendant=""onclick="decide('#saveSelect', 'Simple Saver', (0.05*data[0][2]), false, '#save');">
+                <img id="savvy" class="center" src="https://climateismoney.files.wordpress.com/2021/07/savvysaver.png" alt="Savvy Saver: 10%/month" onclick="decide('#saveSelect', 'Savvy Saver', (0.1*data[0][2]), false, '#save');">
+                <img id="super" class="center" src="https://climateismoney.files.wordpress.com/2021/07/supersaver.png" alt="Super Saver: 20%/month" onclick="decide('#saveSelect', 'Super Saver', (0.2*data[0][2]), false, '#save')">
+                
+                <div id="save-footer" class="modal-footer">
+                    <div class="modal-footer-right">
+                        <h3>As you've seen, life can be unexpected.  Saving for your future is an important, risk-free investment. Spending in the present can give you immediate gratification, but saving for better times is also crucial. With a fixed rate, savings accounts are stable, risk-free investments with a modest interest rate. Remember, you will get this money back at the end of the game.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="/console.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script >
+    console.log('Images and content adapted from the Federal Reserve Bank of Richmonds "Dollars and Sense" publication. Coded and developed by Anmol Mital, MLWGS Class of 2023. Educational Purposes Only. Copyright Climate and Money 2021.')    
+    
+        var wheelTile;
+        var data = [];
+        
+        function popup(box, category) {
+            document.querySelectorAll('audio').forEach(e => {
+                e.currentTime = 0;
+                e.pause();
+            } );
+            if($(box).attr("highlight")==="yes") {
+                $(category).dialog({
+                    modal: true,
+                    width: 1000, 
+                    position: {my: "center", at: "center", collision: "flip"},
+                });
+            } else {
+                alert("Please click on the highlighted box instead!")
+            };
+        };
+        
+        function highlight(box) {
+           document.querySelectorAll('audio').forEach(e => {
+            e.currentTime = 0;
+            e.pause();
+           }); 
+           
+           $(box).attr("highlight", "no");
+            
+            var locationId = Number($(box).attr("location-id"));
+            var nextId = locationId + 1;
+            
+            if(nextId===17) {
+                endGame();
+            }
+            else {
+                $(box).addClass("hiddenSquare");
+                var boxId = document.querySelectorAll('[location-id="'+nextId+'"]');
+                console.log(boxId);
+                $(boxId).attr("highlight", "yes");
+                wheelTile = null; 
+            }
+            
+        }
+
+        /*  Saving reference of the tile that called Wheel of Fortune.
+            Will be using this reference later to call highlight when we are about to close the modal using closeWheel() function */
+        function setWheelTile(box) {
+            wheelTile = box;
+        }
+        
+        var data = [];
+            var interestRates = {
+                'bond': 0.0527,
+                'treasure': 0.0484,
+                'Writer': 0.0530,
+                'FixA': 0.02
+            };
+
+     
+        
+        function invest(box) {
+            var investAmount = document.getElementById("investAmount").value;
+            investAmount = investAmount == '' ? 0 : Number(investAmount);
+            var realAmount = Number(investAmount);
+            console.log(typeof realAmount);
+            
+            if(realAmount>1500) {
+                alert("Please choose a value less than $1,500.")
+            } else {
+                data.push(['#invest', investAmount, realAmount, false]);
+                const button = document.getElementById('submitAmount')
+                button.disabled = true;
+                $("#invest1-cell").text("-" + investAmount);
+
+                var nextAmount = 1500 - realAmount; 
+                var paraText = "You have already invested $" + realAmount + " so you can only invest $" + nextAmount + " more.";
+                $("#previous-amount").text(paraText);
+                var possibleStringAmount = "'" + nextAmount + "'";
+                $("#investAmount2").attr("max", possibleStringAmount);
+                $("#invest").dialog("close");
+                highlight(box);
+            }
+        };
+        
+        function investTwo(box) {
+            var previousAmount = data[4][2];
+            var possibleAmount = 1500 - previousAmount;
+            var amountInvested = document.getElementById("investAmount2").value;
+            amountInvested = amountInvested == '' ? 0 : Number(amountInvested);
+            
+            var numberAmount = Number(amountInvested);
+            if(numberAmount > possibleAmount) {
+                alert("Last time you invested $" + previousAmount + ". Please invest less than $" + possibleAmount + ".")
+            } else {
+                data.push(['#invest2', amountInvested, numberAmount, false]);
+                $("#invest2-cell").text("-" + numberAmount)
+                const lastButton = document.getElementById('submitInvest')
+                lastButton.disabled = true;
+                $("#invest2").dialog("close");
+                highlight(box);
+            }
+        };
+
+        function communication(box) {
+            var val = [];
+            $(':checkbox:checked').each(function(i){
+                val[i] = Number($(this).val());
+            });
+            var sum = 0;
+            for (var a = 0; a < val.length; a++) {
+                sum += val[a];
+                $("#commSelect-cell").text("-" + sum);
+                data.push(["#commSelect", "mc", sum, false]);
+                $("#commSelect").dialog("close");
+                highlight(box);
+            }
+        };
+        
+        function endGame() {
+            var investInterest1 = Math.round(100*(1.2 * Number(Math.abs($("#invest1-cell").text()))))/100;
+                $("#invest1Cell").text("+" + investInterest1);
+            var investInterest2 = Math.round(100*(1.2 * Number(Math.abs($("#invest2-cell").text()))))/100;
+                $("#invest2Cell").text("+" + investInterest2);
+            var saveInterest = Number(Math.abs($("#saveSelect-cell").text()));;
+                $("#saveSelectCell").text("+" + saveInterest);
+            var newCenterText = " Thanks for playing! Please fill out our <a href='https://docs.google.com/forms/d/e/1FAIpQLSf5Lj41OwhodWVeYB6e0hxRSgYAHjNR7Gf-ovGwAEb3LUYAOA/viewform?usp=sf_link' target='_blank'>Feedback Form</a> so we can continue to improve the game."
+            console.log("end");
+            
+            var earnSum = 0;
+            $(".earncell").each(function() {
+                earnSum += Number($(this).text());
+                $("#incomeTotal").text("+$" + earnSum);
+            });;
+            
+            var expenseSum = 0;
+            var posVar = 0;
+            $(".expensecell").each(function() {
+                expenseSum += Number($(this).text());
+                posVar = Math.round(100*(Math.abs(expenseSum)))/100;
+                $("#expenseTotal").text("-$" + posVar)
+            });;
+            var totalText;
+            var aText;
+            var totalValue = earnSum + expenseSum;
+            if (posVar < earnSum) {
+                totalText = "+$";
+                aText = " You earned more than you spent! You are on track to a well-balanced budget!"
+                document.getElementById("main-page-audio-small").src = "audio/ending-earned-more-than-spent-audio.m4a";
+                document.getElementById("main-page-audio").src = "audio/ending-earned-more-than-spent-audio.m4a";
+            } else if(posVar > earnSum) {
+                totalText = "-$";
+                aText = " You spent more than you earned. Next time, you may want to spend less to avoid debt."
+                document.getElementById("main-page-audio-small").src = "audio/ending-spent-more-than-earned.m4a";
+                document.getElementById("main-page-audio").src = "audio/ending-spent-more-than-earned.m4a";
+            }
+            $("#totalCell").text(totalText + totalValue);
+            $(".game-desc-text").html(aText + newCenterText);
+            //$("#formLink").attr("href", "https://docs.google.com/forms/d/e/1FAIpQLSf5Lj41OwhodWVeYB6e0hxRSgYAHjNR7Gf-ovGwAEb3LUYAOA/viewform?usp=sf_link");
+            //$("#formLink").text("Feedback Form");
+        }
+        
+        function unexpectedEvent(box, category) {
+            var divname = "#unexpectedSelect1"; 
+            if($(box).attr("highlight")==="yes") {
+                $(divname).dialog({
+                    width: 1000, 
+                    position: {my: "center", at: "center", collision: "flip"},
+                });
+            } else {
+                alert("Please click on the highlighted box instead!")
+            };
+            
+            var randomValue = Math.floor(Math.random()*10);
+            // var heads = document.getElementById("heads");
+            // var tails = document.getElementById("tails");
+            $("#heads").unbind("click");
+            $("#tails").unbind("click");
+            if (randomValue < 2) {
+                $("#unexpectedText").text(" Flip a coin! Heads: You dropped your phone in the toilet and have to pay $1000 to get it repaired. Tails: Your grandma gave you $500 because she missed you.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1000, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-1000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 500, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 4) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, you messed up your taxes and owe $1200. If tails, you won a contest and receive $600.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1200, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-1200");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 600, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+600");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 6) {
+                $("#unexpectedText").text("The market is unexpected. Flip a coin: if heads, you earned $1000. If tails, you lost $500.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1000, true]); 
+                        var cellId = category + "Cell";
+                        $(cellId).text("+1000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 500, false])
+                        var cellId = category + "-cell";
+                        $(cellId).text("-500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 7) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, your refridgerator broke, and you need to pay $300 to fix it. If tails, you earned $400 from selling an old baseball card on Ebay.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 300, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-300");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    })
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 400, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+400");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 8) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin. If heads, you got hurt and hospital bills cost you $2000. If tails, the state government gave you $1500 for installing solar panels on your roof.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 2000, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-2000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 1500, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+1500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 9) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, your computer got hacked, and you must pay $500 to fix it. If tails, you start a part time photography business and get $2000 from a wedding.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 500, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 2000, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+2000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, your refridgerator broke, and you need $300 to fix it. If tails, your great-aunt gave $60.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 300, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-300");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 60, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+60");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            };
+        };
+    //Wheel of fortune
+        const sectors = [
+          {color:"#f82", label:"Pay $20"},
+          {color:"#0bf", label:"Pay $20"},
+          {color:"#fb0", label:"Pay $20"},
+          {color:"#0fb", label:"Pay $20"},
+          {color:"#b0f", label:"Pay $20"},
+          {color:"#f0b", label:"$1500"},
+          {color:"#bf0", label:"Pay $20"},
+        ];
+        const rand = (m, M) => Math.random() * (M - m) + m;
+        const tot = sectors.length;
+        const EL_spin = document.querySelector("#spin");
+        const ctx = document.querySelector("#wheel").getContext('2d');
+        const dia = ctx.canvas.width;
+        const rad = dia / 2;
+        const PI = Math.PI;
+        const TAU = 2 * PI;
+        const arc = TAU / sectors.length;
+
+        const friction = 0.991; // 0.995=soft, 0.99=mid, 0.98=hard
+        let angVel = 0; // Angular velocity
+        let ang = 0; // Angle in radians
+
+        const getIndex = () => Math.floor(tot - ang / TAU * tot) % tot;
+
+        function drawSector(sector, i) {
+          const ang = arc * i;
+          ctx.save();
+          // COLOR
+          ctx.beginPath();
+          ctx.fillStyle = sector.color;
+          ctx.moveTo(rad, rad);
+          ctx.arc(rad, rad, rad, ang, ang + arc);
+          ctx.lineTo(rad, rad);
+          ctx.fill();
+          // TEXT
+          ctx.translate(rad, rad);
+          ctx.rotate(ang + arc / 2);
+          ctx.textAlign = "right";
+          ctx.fillStyle = "#fff";
+          ctx.font = "bold 20px sans-serif";
+          ctx.fillText(sector.label, rad - 10, 10);
+          //
+          ctx.restore();
+        };
+
+        function rotate() {
+          const sector = sectors[getIndex()];
+          ctx.canvas.style.transform = `rotate(${ang - PI / 2}rad)`;
+          EL_spin.textContent = !angVel ? "SPIN" : sector.label;
+          EL_spin.style.background = sector.color;
+        }
+        function closeWheel() {
+            highlight(wheelTile);
+            $("#wheelOfFortune").dialog("close");
+        }
+        var wheelNumber = 0;
+        function frame() {
+          if (!angVel) return;
+          angVel *= friction; // Decrement velocity by friction
+          if (angVel < 0.002) {
+              var wheelValue = determineValue(ang);
+              wheelNumber = wheelNumber + 1;
+              
+              if(wheelValue == 1500) {
+                  var accept = confirm("Congratulations! You won $1500!");
+                  if(accept===true) {
+                      closeWheel();
+                  } else if (accept===false) {
+                      closeWheel();
+                  }
+                  data.push(['wheel', 'won', wheelValue, true]);
+                  var cellId = "#wheelOfFortune" + wheelNumber.toString() + "PLUScell";
+                  $(cellId).text("+1500");
+              } else {
+                  var accept = confirm("Sorry, you lost $20.");
+                  if(accept===true) {
+                      closeWheel();
+                  } else if (accept===false) {
+                      closeWheel();
+                  }
+                  data.push(['wheel', 'lost', wheelValue, false]);
+                  var cellId = "#wheelOfFortune" + wheelNumber.toString() + "-cell";
+                  $(cellId).text("-20");
+              }
+              angVel = 0;
+        // Bring to stop
+          }
+          ang += angVel; // Update angle
+          ang %= TAU; // Normalize angle
+          rotate();
+        }
+
+        function engine() {
+          frame();
+          requestAnimationFrame(engine)
+        }
+
+        // INIT
+        sectors.forEach(drawSector);
+        rotate();
+        engine();
+        EL_spin.addEventListener("click", () => {
+          if (!angVel) angVel = rand(0.25, 0.35);
+        });
+        
+        function determineValue(ang) {
+            if(ang > 0 && ang <= 0.897) {
+                return 20;
+            }
+
+            if(ang > 0.897 && ang <= 1.794) {
+                return 1500;
+            }
+            if(ang > 1.794 && ang<=2.691) {
+                return 20;
+            }
+            if(ang > 2.691 && ang <=3.589) {
+                return 20;
+            }
+            if(ang > 3.589 && ang<=4.486) {
+                return 20;
+            }
+            if(ang > 4.486 && ang<=5.383) {
+                return 20;
+            }
+
+            if(ang>5.383) {
+                return 20;
+            }
+        }
+
+        $(document).ready(function(){
+            $('#wheelOfFortune').hide();
+        });
+    </script>
+    //   <script type="text/javascript">
+      var wheelMap = new Map();
+      let totalValue = 0;
+         function calculate(category,income, expense, bond) {
+          var result =  confirm("Are you sure you want to choose your income as " + income + " and your expense as $ " + expense + " with a bond with a " +bond);
+         var incomeParseValue = parseInt(income);
+            var expenseParseValue = parseInt(expense);
+            var bondParseValue = parseFloat(bond);
+            var calValue = ((incomeParseValue - expenseParseValue) * bondParseValue);
+            if category === "Year1"){
+                calValue = calValue;
+            } else if (category === '#Year5') {
+               calValue = calValue * 5;
+            } else if (category === '#Year10') {
+                calValue = calValue * 5;
+            } else if (category === '#Year15') {
+                calValue = calValue * 5;
+            }
+            // if (category === '#Year1') {
+            //     calValue += incomeParseValue;
+            // } else {
+            //     calValue += totalValue;
+            // }
+            // if (category === '#Year5') {
+            //    calValue = calValue * 5;
+            // } else if (category === '#Year10') {
+            //     calValue = calValue * 5;
+            // } else if (category === '#Year15') {
+            //     calValue = calValue * 5;
+            // }
+            if(result) {
+                wheelMap.set(category, [calValue, expenseParseValue])
+            }
+            if (category === '#Year5') {
+                calValue += incomeParseValue;
+            } else {
+                calValue += totalValue;
+            }
+            if(result) {
+                wheelMap.set(category, [calValue, expenseParseValue])
+        
+             if(result == true) {
+                wheelMap.set(category, [calValue, expense])
+                  var cellText = "price select " + result; 
+                  var cellId = category+"Select-cell";
+                  var expenseCell = category+"Expense-cell"
+                  $(cellId).text(calValue);
+                  $(expenseCell).text(expenseParseValue);
+                 $(category+"Select").dialog("close");
+                 $(category).attr("highlight", "no");
+                 if(category=== "#Year1"){
+                    $("#Year5").attr("highlight", "yes");
+                 }
+                 if(category=== "#Year5"){
+                    $("#Year10").attr("highlight", "yes");
+                 }
+                 if(category=== "#Year10"){
+                    $("#unexpected1").attr("highlight", "yes");
+                 }
+                 if(category=== "#unexpected1"){
+                    $("#Invest").attr("highlight", "yes");
+                 }
+                 if(category=== "#Invest"){
+                    $("#wheel1").attr("highlight", "yes");
+                 }
+                 if(category=== "#wheel1"){
+                    $("#CommunicationID").attr("highlight", "yes");
+                 }
+                 if(category=== "#Save"){
+                    $("#wheel2").attr("highlight", "yes");
+                 }
+                 if(category=== "#wheel2"){
+                    $("#Clothes").attr("highlight", "yes");
+                 }
+                 if(category=== "#Clothes"){
+                    $("#Fun").attr("highlight", "yes");
+                 }
+                 if(category=== "#finalInvest"){
+                    $("#unexpected2").attr("highlight", "yes");
+                 }
+                 if(category=== "#wheel3"){
+                    $("#Year30").attr("highlight", "yes");
+                 }
+                 if(category=== "#Year30"){
+                    $("#unexpected3").attr("highlight", "yes");
+                 }
+                 totalValue += calValue;
+             };
+          console.log(wheelMap.get(category));
+        };
+     </script>
+
+</body>
+</html>
